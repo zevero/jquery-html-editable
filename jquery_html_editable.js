@@ -6,7 +6,7 @@
       var $el = $(this).hide();
       var $textarea = $('<textarea>').addClass('html_editable_').text($el.text());
       $el.after($textarea);
-      $textarea.css({minHeight: $textarea[0].rows+1+'em', overflow:'hidden'}).focus();
+      $textarea.css({minHeight: $textarea[0].rows+1+'em', overflow:'hidden'}).focus().select();
     });
     this.on('blur',target + ' + textarea.html_editable_', function() { //on blur write everything back
       var $textarea = $(this);
